@@ -1,0 +1,15 @@
+<nav class="navbar nav-bar">
+    <div class="container">
+        <a class="navbar-brand logo" href="/">Taks Collection</a>
+        {{#if isLogin}}
+        <form class="d-flex">
+            <a href="/logout" class="btn btn-primary m-2 btn-signup">Logout</a>
+        </form>
+        {{else}}
+        <form class="d-flex">
+            <a href="/login" class="btn btn-primary m-2 btn-signup">Sign In</a>
+            <a href="/register" class="btn btn-light m-2">Sign Up</a>
+        </form>
+        {{/if}}
+    </div>
+</nav>

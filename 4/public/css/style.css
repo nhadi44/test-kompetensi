@@ -1,0 +1,67 @@
+body {
+  /* background-color: rgb(0, 73, 231) !important; */
+  font-family: "Roboto", sans-serif;
+}
+
+.logo {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+.logo:hover {
+  color: rgb(226, 226, 226);
+}
+
+.btn-signup {
+  padding: 10px 20px !important;
+}
+
+.nav-bar {
+  background-color: rgb(1, 32, 172) !important;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.144);
+}
+
+.hero {
+  margin: 250px;
+}
+
+.text-hero {
+  padding: 10px;
+  font-size: 50px;
+}
+
+.btn-hero {
+  margin-top: 25px !important;
+}
+
+.container-form {
+  width: 40% !important;
+  /* margin: 250px; */
+  margin-top: 250px;
+  background-color: rgb(201, 201, 201);
+  border-radius: 10px;
+}
+
+.form-login {
+  padding: 50px;
+}
+
+.form-register {
+  padding: 50px;
+}
+
+.container-form-register {
+  width: 40% !important;
+  margin-top: 210px;
+  background-color: rgb(201, 201, 201);
+  border-radius: 10px;
+  /* justify-content: center; */
+}
+
+.collection {
+  margin-top: 40px;
+  height: 200px;
+  background-color: rgb(51, 105, 223);
+  border-radius: 10px;
+  color: white;
+}

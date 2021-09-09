@@ -1,0 +1,90 @@
+{{> header}}
+{{> navbar}}
+<div class="container">
+    <h2 class="mt-4">{{title}}</h2>
+    <a href="/collection" class="btn btn-danger mt-4">Back</a>
+    <button type="button" class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Add Taks
+    </button>
+    <table class="table text-center mt-4">
+        <thead>
+            <tr>
+                <th scope="col">No</th>
+                <th scope="col">Name</th>
+                <th scope="col">Collection</th>
+                <th scope="col">Status</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each results}}
+            <tr>
+                <th scope="row">{{@index}}</th>
+                <th>{{this.name}}</th>
+                <th>{{this.collection}}</th>
+                <th>{{this.status}}</th>
+                <td>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#editModal">
+                        Edit
+                    </button>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">New Task</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="" method="POST">
+                    <div class="col">
+                        <label for="name" class="form-label">Task Name</label>
+                        <input type="text" name="name" id="name" class="form-control">
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">New Task</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="" method="POST">
+                    <div class="col">
+                        <label for="name" class="form-label">Task Name</label>
+                        <input type="text" name="name" id="name" class="form-control" value="{{results.0.name}}">
+                    </div>
+                    <div class="col">
+                        <label for="name" class="form-label">Status</label>
+                        <select name="is_done" id="is_done" class="form-control form-select">   
+                            <option value="" selected>Select Status</option>
+                            <option value="0">Finished</option>
+                            <option value="1">Unfinished</option>
+                        </select>
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Save changes</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+{{> footer}}
